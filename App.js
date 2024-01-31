@@ -6,11 +6,15 @@ app.get('/', (req, res) => {
 })
 
 app.get('/display', (req, res) => {
-    res.send(__dirname+'/index.html')
+    res.sendFile(__dirname+'/index.html')
 })
-app.post('/display', (req, res) => {
-    const num1 = parseInt(req.body.num1)
-    res.send('The nunmber is '+num1)
+
+app.post('/display', function(req, res) {
+    console.log(num1)
+    var num1 =parseFloat(req.body.num1)
+    
+    res.send('Your BMI is '+num1)
+
 })
 
 app.listen(3008, () => {
