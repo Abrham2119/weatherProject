@@ -16,7 +16,7 @@ app.post('/', (req, res) => {
   console.log("the post is recived")
 })
 
-
+ 
 
 
 // const query = "london"
